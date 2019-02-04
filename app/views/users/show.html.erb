@@ -1,5 +1,15 @@
 <h2><%= @user.full_name %>'s Profile</h2>
 
 <h3>Followers</h3>
+<ul>
+  <% @user.followers.each do |follower| %>
+    <li><%= follower.full_name %></li>
+  <% end %>
+</ul>
 
 <h3>Following</h3>
+<ul>
+  <% @user.followed_people.each do |followed_person| %>
+    <li><%= followed_person.full_name %></li>
+  <% end %>
+</ul>
